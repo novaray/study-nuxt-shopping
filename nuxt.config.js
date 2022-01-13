@@ -43,5 +43,10 @@ export default {
   // server setup(host도 정의 가능하다.)
   server: {
     port: process.env.NODE_ENV === 'production' ? null : 5001
+  },
+
+  env: {
+    baseURL: process.env.NODE_ENV === 'production'
+      ? 'https://my-json-server.typicode.com/novaray/study-nuxt-shopping-api' : 'http://localhost:3000'
   }
 }
