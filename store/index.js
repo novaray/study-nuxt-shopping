@@ -20,7 +20,7 @@ export const mutations = {
 };
 
 export const actions = {
-  async [FETCH_CART_ITEM]({commit}) {
+  async [FETCH_CART_ITEMS]({commit}) {
     const { data } = await fetchCartItems();
     commit('setCartItems', data.map(item => ({
       ...item,
